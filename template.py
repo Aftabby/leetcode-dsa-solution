@@ -33,5 +33,24 @@ Algo
     - 
 '''
 
+
+
+#Short template
+
+'''
+problem_name = Shuffle the Array
+problem_source = https://leetcode.com/problems/shuffle-the-array/description/
+
+Algo 
+    -
+'''
+
+
+
+
+
+
+
+
 #solve = Solution()
-#result = Solution.
+#result = solve.
