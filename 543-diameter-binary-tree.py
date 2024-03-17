@@ -63,7 +63,7 @@ class Solution:
 
 #Another approach
 class Solution:
-    def diameterOfBinaryTree(self, root: Optional[TreeNode]) -> int:
+    def diameterOfBinaryTree(self, root) -> int:
         self_diameter = 0
         def dfs(node):
             if not node:
