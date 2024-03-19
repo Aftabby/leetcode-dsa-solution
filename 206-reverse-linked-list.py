@@ -13,7 +13,7 @@ class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
         self.next = next
-'''
+
 #Recursive Approach
 class Solution:
     def reverseList(self, head, prev=None):
@@ -27,8 +27,6 @@ class Solution:
             return self.reverseList(next, head)
         
 
-
-'''
 
 #Iteration Approach
 class Solution:
