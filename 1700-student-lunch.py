@@ -1,4 +1,4 @@
-'''
+"""
 problem_name = Number of Students Unable to Eat Lunch
 problem_source = https://leetcode.com/problems/number-of-students-unable-to-eat-lunch/description/
 
@@ -11,22 +11,27 @@ Algo
     -else if student number of 1 is less by m
         -iterate over sandwich till the (number of 1-preffered student + 1) of 1-shaped sandwich = i
         -return len(sandwich[i:])
-'''
+"""
+
 
 class Solution:
     def countStudents(self, students: list[int], sandwiches: list[int]) -> int:
         stdnt_0 = students.count(0)
         stdnt_1 = len(students) - stdnt_0
         sndwch_0 = sandwiches.count(0)
-        #sndwch_1 = len(sandwiches) - sndwch_0
+        # sndwch_1 = len(sandwiches) - sndwch_0
 
         if stdnt_0 == sndwch_0:
             return 0
         elif stdnt_0 < sndwch_0:
-            for i in range(stdnt_1 + stdnt_0):       #Iterating over the total number of sandwiches (which is equal to the number of students)
+            for i in range(
+                stdnt_1 + stdnt_0
+            ):  # Iterating over the total number of sandwiches (which is equal to the number of students)
                 if sandwiches[i] == 0:
                     stdnt_0 -= 1
-                    if stdnt_0 == -1:               #-iterate over sandwich till the (number of 0-preferred student + 1) of 0-shaped sandwich = i
+                    if (
+                        stdnt_0 == -1
+                    ):  # -iterate over sandwich till the (number of 0-preferred student + 1) of 0-shaped sandwich = i
                         break
         else:
             for i in range(stdnt_0 + stdnt_1):
